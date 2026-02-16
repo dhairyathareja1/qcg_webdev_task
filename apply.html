@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply – QCG</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/applypage.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="logo">
+        <a href="index.html"
+          ><img src="elements/qcg_logo.png" width="220px"
+        /></a>
+      </div>
+      <ul class="navlinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="apply.html">Apply Now</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+        <li>
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggle" />
+            <span class="slider"></span>
+          </label>
+        </li>
+      </ul>
+    </header>
+
+    <main class="apply-container">
+      <section class="step active" id="step-1">
+        <h2>Basic Details</h2>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="text" placeholder="Branch & Year" required />
+        <button onclick="nextStep()">Next</button>
+      </section>
+
+      <section class="step" id="step-2">
+        <h2>Select Preferred Domain</h2>
+
+        <div class="radio-group">
+          <label class="radio-card">
+            <input type="radio" name="domain" value="core" />
+            Core — Quantum, logic & problem-solving
+          </label>
+
+          <label class="radio-card">
+            <input type="radio" name="domain" value="web" />
+            Web Development — UI, interactions & code
+          </label>
+
+          <label class="radio-card">
+            <input type="radio" name="domain" value="design" />
+            Design — Visuals, layouts & aesthetics
+          </label>
+        </div>
+
+        <button type="button" onclick="nextStep()">Proceed to Quiz</button>
+      </section>
+
+      <section class="step" id="step-3">
+        <h2 id="quiz-title">Quiz</h2>
+
+        <div id="quiz-container"></div>
+
+        <button onclick="submitQuiz()">Submit Quiz</button>
+      </section>
+
+      <section class="step result-step" id="step-4">
+        <h2>Result</h2>
+        <p id="result-text"></p>
+
+        <p class="note">
+          Thank you for applying! Our team will reach out if you’re shortlisted.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>© 2026 Quantum Computing Group, IIT Roorkee</p>
+
+        <div class="footer-links">
+          <a href="https://www.instagram.com/qcgiitr/?hl=en"
+            ><img id="instagram" alt="instalogo" src="elements/insta_logo.png"
+          /></a>
+          <a href="https://in.linkedin.com/company/qcgiitr"
+            ><img
+              id="linkedin"
+              alt="linkedinlogo"
+              src="elements/linkedin_logo.png"
+          /></a>
+          <a href="https://github.com/qcgiitr"
+            ><img id="github" alt="gitlogo" src="elements/github_logo.png"
+          /></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+  </body>
+</html>

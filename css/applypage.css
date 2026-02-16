@@ -1,0 +1,262 @@
+.apply-container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 40px;
+}
+
+.step {
+  display: none;
+}
+
+.step.active {
+  display: block;
+}
+
+input {
+  width: 100%;
+  margin: 12px 0;
+  padding: 10px;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #7a386c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.apply-container {
+  max-width: 640px;
+  margin: 100px auto;
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.6s ease;
+}
+
+.step {
+  display: none;
+  animation: slideUp 0.5s ease;
+}
+
+.step.active {
+  display: block;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  margin: 12px 0;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.radio-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.radio-card:hover {
+  background: rgba(122, 56, 108, 0.08);
+  transform: translateY(-2px);
+}
+
+.radio-card input {
+  transform: scale(1.2);
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.quiz-option:hover {
+  background: rgba(122, 56, 108, 0.08);
+}
+
+button {
+  margin-top: 30px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #7a386c, #9c4f88);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: block;
+  width: 100%;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(122, 56, 108, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.radio-card,
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: 0.25s ease;
+  position: relative;
+}
+
+.radio-card input,
+.quiz-option input {
+  display: none;
+}
+
+.radio-card::before,
+.quiz-option::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #7a386c;
+  flex-shrink: 0;
+}
+
+.radio-card:has(input:checked)::before,
+.quiz-option:has(input:checked)::before {
+  background: #7a386c;
+}
+
+body.dark-mode .apply-container {
+  background: rgba(30, 30, 35, 0.85);
+  color: #f1f1f1;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode input {
+  background: #1e1e1e;
+  color: white;
+  border: 1px solid #444;
+}
+
+body.dark-mode input::placeholder {
+  color: #aaa;
+}
+
+.result-step {
+  text-align: center;
+}
+
+.result-step h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+#result-text {
+  font-size: 1.3rem;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+.result-step::before {
+  content: "✓";
+  display: block;
+  font-size: 4rem;
+  color: #7a386c;
+  margin-bottom: 15px;
+}
+
+.note {
+  margin-top: 30px;
+  font-size: 1rem;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+body.dark-mode .result-step::before {
+  color: #d9a6cc;
+}
+
+.apply-container {
+  position: relative;
+}
+
+.step {
+  display: none;
+  animation: fadeSlide 0.5s ease;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+button:active {
+  transform: scale(0.97);
+}
+h2 {
+  letter-spacing: 0.5px;
+}
